@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+body{
+     height: 100vh;   /* full viewport height */
+    margin: 0;
+    background:
+    url("https://www.pokemon.com/static-assets/content-assets/cms2/img/watch-pokemon-tv/seasons/season15/season15_ep42_ss01.jpg");
+     background-size: cover;        /* Makes image fill screen */
+    background-position: center;   /* Keeps image centered */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-attachment: fixed;  
+     font-family: "McLaren", sans-serif;
+     font-weight: 400;
+    font-style: normal;
+}
+
+
+h1{
+    color:ghostwhite;
+    background-color: rgb(52, 52, 126);
+    width:20em;
+    text-align: center;
+    padding: 1em;
+    margin-right:-10%;
+    border: ghostwhite solid 2px;
+   border-radius: 20px;
+   margin-left: 25%;
+}
+        /* STYLE FOR THE INPUT FIELD */
+        #charInput {
+        color: rgb(52, 52, 126);
+          font-family: "McLaren", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 1em;
+        background-color: ghostwhite;
+        }
+
+        /* STYLE FOR THE SUBMIT BUTTON */
+        #submitButton {
+            color: ghostwhite;
+            background-color: rgb(255, 83, 60);
+            border: ghostwhite 2px solid;
+            border-radius: 5px;
+      font-family: "McLaren", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em;
+
+
+        }
+
+        /* STYLE FOR THE IMAGE */
+        #displayedImage {
+        display: none; /* This line is mandatory */
+        margin-left: -10%;
+        margin-top: 10%;
+         filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+         width: 40%;
+         height: auto;
+        }
+
+div{
+    
+    margin-top: 6%;
+    margin-left:40%;
+}

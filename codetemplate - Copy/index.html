@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotta Catch'em All!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://ssb.wiki.gallery/images/7/7b/Pok%C3%A9_Ball_Origin.png">
+
+<body>
+    <h1>Type a letter to choose your pokemon</h1>
+<div>
+    
+    <!-- INPUT FIELD FOR 1 CHARACTER -->
+    <input type="text" id="charInput" maxlength="1">
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+     
+    <button onclick="displayImage()" id="submitButton">I choose you!</button>
+
+    <!-- IMAGE TO DISPLAY -->
+    <img id="displayedImage" src="https://ssb.wiki.gallery/images/7/7b/Pok%C3%A9_Ball_Origin.png" alt="Your pokemon escaped...">
+</div>
+    <!-- Image Display Script Below -->
+    <script>
+        // Array of images
+        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
+        const images = [
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/063.png", //A
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/012.png", //B
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/035.png", //C
+            "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F050.webp&w=640&q=75", //D
+            "https://upload.wikimedia.org/wikipedia/en/a/a9/Pok%C3%A9mon_Eevee_art.png", //E
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/653.png", //F
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/658.png", //G
+            "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Pok%C3%A9mon_Haunter_art.png/250px-Pok%C3%A9mon_Haunter_art.png", //H
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/002.png", //I
+            "https://upload.wikimedia.org/wikipedia/en/2/22/Pok%C3%A9mon_Jigglypuff_art.png", //J
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/115.png", //K
+            "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Pok%C3%A9mon_Lucario_art.png/250px-Pok%C3%A9mon_Lucario_art.png", //L
+            "https://db.pokemongohub.net/_next/image?url=%2Fimages%2Fofficial%2Ffull%2F150.webp&w=640&q=75", //M
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/032.png", //N
+            "https://archives.bulbagarden.net/media/upload/thumb/9/90/0501Oshawott.png/250px-0501Oshawott.png", //O
+            "https://upload.wikimedia.org/wikipedia/en/2/2d/Pok%C3%A9mon_Psyduck_art.png", //P
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/211.png", //Q
+            "https://upload.wikimedia.org/wikipedia/en/3/34/Raichu.png", //R
+            "https://archives.bulbagarden.net/media/upload/thumb/3/3f/0143Snorlax.png/800px-0143Snorlax.png", //S
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/175.png", //T
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/197.png", //U
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/037_f2.png", //V
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/321.png", //W
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/716.png", //X
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/717.png", //Y
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/718.png"  //Z
+        ];
+
+        function displayImage() {
+            const input = document.getElementById("charInput").value.toUpperCase();
+            const imgElement = document.getElementById("displayedImage");
+
+            // Assign an image based on character (A-Z)
+            const index = input.charCodeAt(0) - 65; // 'A' is 65 in ASCII
+            if (index >= 0 && index < images.length) {
+                imgElement.src = images[index];
+                imgElement.style.display = "block";
+            } else {
+                /*
+                alert("Please enter a letter between A and Z.");
+                imgElement.style.display = "none";
+                */
+
+                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
+                imgElement.src = "https://i.pinimg.com/originals/8a/81/ec/8a81ecd8fdd266b3221da325875c0ea8.gif"
+                imgElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
